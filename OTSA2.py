@@ -45,8 +45,7 @@ def barplot(df,x,y,estimator,outLabel):
 
 def violinplot(df,x,y,outLabel):
 	fig, ax = plt.subplots(figsize=(6,4))
-	sns.violinplot(data=df,x=x,y=y,cut=0,scale="width",inner="quartile",order=['NAA', 'NAC', 'NAG', 'NAT', 'NCA', 'NCC', 'NCG', 'NCT',
- 'NGA', 'NGC', 'NGG', 'NGT', 'NTA', 'NTC', 'NTG', 'NTT'],palette ="summer")
+	sns.violinplot(data=df,x=x,y=y,cut=0,scale="width",inner="quartile",palette ="summer")
 	plt.yscale("log")
 	ax.spines[['right', 'top']].set_visible(False)
 	plt.savefig(f"{outLabel}.Number_mismatches.pdf",bbox_inches='tight')
